@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhitik Prajapati | Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+<div class="bg-glow"></div>
+
+<header class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span class="logo-text">Portfolio.</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container hero-container reveal">
+    <div class="hero-text">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Rhitik Prajapati</h1>
+      <p class="hero-role"></p>
+
+      <p class="hero-description">
+        Detail-oriented Software Engineer with hands-on experience building end-to-end AI systems,
+        including Retrieval-Augmented Generation (RAG), clinical NLP pipelines, and
+        reinforcement learning–based financial models. I focus on production-ready APIs,
+        robust evaluation, and clean user interfaces.
+      </p>
+
+      <div class="hero-social">
+        <a href="https://github.com/RITZ124" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rhitik-prajapati-502566257/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:rhitikprajapati9279@gmail.com" class="social-icon"><i class="fa fa-envelope"></i></a>
+      </div>
+
+      <a href="Rhitik-Resume.pdf" class="btn-primary" download="Rhitik_Prajapati_Resume.pdf">
+        Download Resume
+      </a>
+    </div>
+
+    <div class="hero-image floating-orbit">
+      <div class="hexagon-wrap floating">
+        <div class="hexagon-glow"></div>
+        <img src="public/rhitik-profile.png" class="profile-img" alt="Rhitik profile" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container section-container reveal">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <p>Who I Am</p>
+    </div>
+
+    <div class="two-column">
+      <p>
+        I'm a Software Engineer specializing in AI/ML systems, backend development, and data-driven products.
+        I enjoy taking ideas from zero to one — designing architecture, implementing APIs, integrating LLMs,
+        and shipping clean, responsive UIs.
+      </p>
+
+      <p>
+        My experience spans FastAPI, React, Python, Streamlit, RL environments, and vector search
+        with FAISS. I care about correctness, observability, and building systems that real users can trust,
+        not just one-off demos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container section-container reveal">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <p>Technologies I Work With</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">TypeScript</div>
+      <div class="skill-card">FastAPI</div>
+      <div class="skill-card">Django</div>
+      <div class="skill-card">React</div>
+      <div class="skill-card">Streamlit</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">FAISS / Vector Search</div>
+      <div class="skill-card">LLMs & RAG</div>
+      <div class="skill-card">Reinforcement Learning (PPO)</div>
+      <div class="skill-card">Docker</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">TailwindCSS</div>
+      <div class="skill-card">REST API Design</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container section-container reveal">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>End-to-End Systems I’ve Built</p>
+    </div>
+
+    <div class="projects-carousel">
+      <button class="scroll-btn prev" id="projectsPrev" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Self Correcting RAG -->
+        <div class="project-card glass">
+          <i class="fas fa-brain project-icon"></i>
+          <h3>Self-Correcting RAG System</h3>
+
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">LLMs</span>
+            <span class="badge">FAISS</span>
+          </div>
+
+          <p>
+            Self-correcting Retrieval-Augmented Generation pipeline using FAISS, TF-IDF guardrails,
+            and answer regeneration for irrelevant context. Includes FastAPI backend, evaluator,
+            and React UI for inspecting queries and responses.
+          </p>
+          <a href="https://github.com/RITZ124/Self-correcting-Rag-Pipeline" target="_blank" class="project-link">
+            GitHub
+          </a>
+        </div>
+
+        <!-- MedInsight -->
+        <div class="project-card glass">
+          <i class="fas fa-notes-medical project-icon"></i>
+          <h3>MedInsight-LLM</h3>
+
+          <div class="badges">
+            <span class="badge">LLM</span>
+            <span class="badge">NLP</span>
+            <span class="badge">React</span>
+            <span class="badge">FastAPI</span>
+          </div>
+
+          <p>
+            Clinical AI system that processes patient text, performs medical NER, summarizes reports,
+            and supports risk reasoning using LLMs. Ships with a React dashboard and FastAPI backend
+            for doctors to explore predictions and explanations.
+          </p>
+          <a href="https://github.com/RITZ124/Medinsight-LLM" target="_blank" class="project-link">
+            GitHub
+          </a>
+        </div>
+
+        <!-- RL Hedging -->
+        <div class="project-card glass">
+          <i class="fas fa-chart-line project-icon"></i>
+          <h3>RL Derivative Hedging Lab</h3>
+
+          <div class="badges">
+            <span class="badge">Reinforcement Learning</span>
+            <span class="badge">PPO</span>
+            <span class="badge">Finance</span>
+            <span class="badge">Python</span>
+          </div>
+
+          <p>
+            Reinforcement learning–based hedging simulator using PPO to compare RL hedging versus
+            delta hedging and no-hedge strategies under GBM price dynamics, with rich metrics and
+            an interactive experimentation UI.
+          </p>
+          <a href="https://github.com/RITZ124/RL-hedging-lab" target="_blank" class="project-link">
+            GitHub
+          </a>
+        </div>
+
+        <!-- Surves Dairy -->
+        <div class="project-card glass">
+          <i class="fas fa-shopping-cart project-icon"></i>
+          <h3>Surves Dairy – Online Ordering</h3>
+
+          <div class="badges">
+            <span class="badge">Django</span>
+            <span class="badge">Python</span>
+            <span class="badge">Twilio</span>
+            <span class="badge">Deployment</span>
+          </div>
+
+          <p>
+            Full-stack e-commerce platform for a real dairy business with product management,
+            cart & checkout, COD/UPI payments, Twilio SMS alerts, and an admin dashboard for orders and payments.
+            Deployed on PythonAnywhere with WSGI & env-based secrets.
+          </p>
+          <a href="https://github.com/RITZ124/surves-dairy" target="_blank" class="project-link">GitHub</a><br />
+          <a href="https://survesdairy.pythonanywhere.com/" target="_blank" class="project-link">Live Website</a>
+        </div>
+
+        <!-- House Price Prediction -->
+        <div class="project-card glass">
+          <i class="fas fa-home project-icon"></i>
+          <h3>House Price Prediction System</h3>
+
+          <div class="badges">
+            <span class="badge">Streamlit</span>
+            <span class="badge">MLflow</span>
+            <span class="badge">Plotly</span>
+            <span class="badge">Python</span>
+          </div>
+
+          <p>
+            End-to-end ML web app that predicts house prices with a modern Streamlit UI, CSV batch prediction,
+            analytics dashboard using Plotly, and automated preprocessing plus model serving designed for
+            production deployment.
+          </p>
+          <a href="https://github.com/RITZ124/House-Price-prediction" target="_blank" class="project-link">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <button class="scroll-btn next" id="projectsNext" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION + CERTIFICATIONS -->
+<section id="academics" class="section">
+  <div class="container section-container reveal">
+    <div class="section-header">
+      <h2>Academics</h2>
+      <p>Education & Certifications</p>
+    </div>
+
+    <div class="edu-cert-grid">
+
+      <!-- Education -->
+      <div class="education-box glass">
+        <h3>Education</h3>
+
+        <div class="education-item">
+          <h4>B.E. Computer Engineering</h4>
+          <p class="edu-college">RMD Sinhgad College of Engineering</p>
+          <p class="edu-grade">CGPA: <strong>8.2 / 10</strong></p>
+        </div>
+
+        <div class="education-item">
+          <h4>Higher Secondary (12th)</h4>
+          <p class="edu-college">K.G.B Patil Junior College</p>
+          <p class="edu-grade">90.83%</p>
+        </div>
+
+        <div class="education-item">
+          <h4>Secondary School (10th)</h4>
+          <p class="edu-college">Shubham International School</p>
+          <p class="edu-grade">80.83%</p>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="certifications-box glass">
+        <h3>Certifications</h3>
+
+        <div class="cert-item">
+          <i class="fa-solid fa-award cert-icon"></i>
+          Generative AI with AWS – Analytics Vidhya
+        </div>
+
+        <div class="cert-item">
+          <i class="fa-solid fa-code cert-icon"></i>
+          JavaScript – Infosys
+        </div>
+
+        <div class="cert-item">
+          <i class="fa-solid fa-laptop-code cert-icon"></i>
+          Java DSA – Udemy
+        </div>
+
+        <div class="cert-item">
+          <i class="fa-solid fa-brain cert-icon"></i>
+          Introduction to Machine Learning – NPTEL
+        </div>
+
+        <div class="cert-item">
+          <i class="fa-solid fa-chart-line cert-icon"></i>
+          Data Analytics Masters – Udemy
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container section-container reveal">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Let’s Work Together</p>
+    </div>
+
+    <div class="contact-content">
+      <p>
+        Open to roles in Software Engineering, AI/ML, and full-stack development.
+        Feel free to reach out for collaborations, freelance work, or full-time opportunities.<br><br><strong>Email:</strong> <a href="mailto:rhitikprajapati9279@gmail.com" class="contact-link">rhitikprajapati9279@gmail.com</a><br><strong>Phone:</strong> <a href="tel:9579447827" class="contact-link">9579447827</a>
+      </p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" name="user_name" required />
+          <input type="email" placeholder="Your Email" name="user_email" required />
+        </div>
+        <textarea rows="4" placeholder="Your Message" name="message" required></textarea>
+        <button class="btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-container">
+    <p>© <span id="year"></span> Rhitik Prajapati. All rights reserved.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+<div id="toastContainer"></div></body>
+</html>
